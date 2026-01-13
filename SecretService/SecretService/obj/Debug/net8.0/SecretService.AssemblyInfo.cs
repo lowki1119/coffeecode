@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SecretService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bf7a1ace452d26c4509f33803f2881cb34d0de57")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4ddf232feecea2cd4860e7a0f5524d4da3813b4")]
 [assembly: System.Reflection.AssemblyProductAttribute("SecretService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SecretService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

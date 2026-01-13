@@ -23,3 +23,9 @@ else
     Console.WriteLine("Environment variable not found for role id");
 }
 
+
+foreach (System.Collections.DictionaryEntry env in Environment.GetEnvironmentVariables())
+{
+    Console.WriteLine($" The env variable is {env.Key} = {env.Value}");
+}
+
