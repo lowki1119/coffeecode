@@ -60,7 +60,7 @@ while (true)
         {
             string secretContent = await response.Content.ReadAsStringAsync();
             Console.WriteLine("Secret Response:");
-            Console.WriteLine(content);
+            Console.WriteLine(secretContent);
         }
     }
     catch (HttpRequestException e)
