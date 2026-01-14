@@ -9,9 +9,10 @@ string? role_id = Environment.GetEnvironmentVariable("ROLE_ID");
 string url = "http://151.145.51.221:8200/v1/auth/approle/login";
 var payload = new
 {
-    role_id = "29bdd94a-b015-aff0-5285",
-    secret_id = "3fe3a4ff-ebe1-b832-2fcd"
+    role_id,
+    secret_id
 };
+
 string jsonPayload = JsonSerializer.Serialize(payload);
 using HttpClient client = new HttpClient();
 StringContent content = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
