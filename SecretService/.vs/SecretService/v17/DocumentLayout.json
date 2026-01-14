@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{907D6338-7337-420C-8B0F-FD87433B4F68}|SecretService\\SecretService.csproj|c:\\users\\samue\\source\\repos\\secret_retrieval_test_project\\secretservice\\secretservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{907D6338-7337-420C-8B0F-FD87433B4F68}|SecretService\\SecretService.csproj|solutionrelative:secretservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{907D6338-7337-420C-8B0F-FD87433B4F68}|SecretService\\SecretService.csproj|c:\\users\\samue\\source\\repos\\secret_retrieval_test_project\\secretservice\\secretservice\\vaultresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{907D6338-7337-420C-8B0F-FD87433B4F68}|SecretService\\SecretService.csproj|solutionrelative:secretservice\\vaultresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1042,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VaultResponse.cs",
+              "DocumentMoniker": "C:\\Users\\samue\\source\\repos\\secret_retrieval_test_project\\SecretService\\SecretService\\VaultResponse.cs",
+              "RelativeDocumentMoniker": "SecretService\\VaultResponse.cs",
+              "ToolTip": "C:\\Users\\samue\\source\\repos\\secret_retrieval_test_project\\SecretService\\SecretService\\VaultResponse.cs",
+              "RelativeToolTip": "SecretService\\VaultResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-14T01:44:53.255Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +40,7 @@
               "RelativeDocumentMoniker": "SecretService\\Program.cs",
               "ToolTip": "C:\\Users\\samue\\source\\repos\\secret_retrieval_test_project\\SecretService\\SecretService\\Program.cs",
               "RelativeToolTip": "SecretService\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-12T22:22:24.352Z",
               "EditorCaption": ""
