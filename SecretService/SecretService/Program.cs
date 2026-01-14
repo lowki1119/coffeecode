@@ -1,11 +1,22 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 // Get the environment variable
+using System.Text;
+using System.Text.Json;
+
 string? secret_id = Environment.GetEnvironmentVariable("SECRET_ID");
 string? role_id = Environment.GetEnvironmentVariable("ROLE_ID");
+string url = "http://151.145.51.221:8200/v1/auth/approle/login";
+var payload = new
+{
+    role_id = "29bdd94a-b015-aff0-5285",
+    secret_id = "3fe3a4ff-ebe1-b832-2fcd"
+};
+string jsonPayload = JsonSerializer.Serialize(payload);
+using HttpClient client = new HttpClient();
+StringContent content = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
 
-
-while(true)
+while (true)
 {
     if (secret_id != null)
     {
@@ -25,9 +36,18 @@ while(true)
         Console.WriteLine(" The role id is not set");
     }
 
-    foreach (System.Collections.DictionaryEntry env in Environment.GetEnvironmentVariables())
+    try
     {
-        Console.WriteLine($" The env variable is {env.Key} = {env.Value}");
+        HttpResponseMessage response = await client.PostAsync(url, content);
+        response.EnsureSuccessStatusCode();
+
+        string responseBody = await response.Content.ReadAsStringAsync();
+        Console.WriteLine("Response:");
+        Console.WriteLine(responseBody);
+    }
+    catch (HttpRequestException e)
+    {
+        Console.WriteLine($"Request error: {e.Message}");
     }
 
     Thread.Sleep(60000);
