@@ -5,9 +5,9 @@ using SecretService;
 using System.Text;
 using System.Text.Json;
 
-string? secret_id = Environment.GetEnvironmentVariable("SECRET_ID");
+//string? secret_id = Environment.GetEnvironmentVariable("SECRET_ID");
 //string? role_id = Environment.GetEnvironmentVariable("ROLE_ID");
-//string? secret_id = "3fe3a4ff-ebe1-b832-2fcd-437bb593e040";
+string? secret_id = "3fe3a4ff-ebe1-b832-2fcd-437bb593e040";
 string? role_id = "29bdd94a-b015-aff0-5285-f44ec726e3ef";
 string url = "http://151.145.51.221:8200/v1/auth/approle/login";
 var payload = new
@@ -58,7 +58,7 @@ while (true)
 
         if (secretResponse.IsSuccessStatusCode)
         {
-            string secretContent = await response.Content.ReadAsStringAsync();
+            string secretContent = await secretResponse.Content.ReadAsStringAsync();
             Console.WriteLine("Secret Response:");
             Console.WriteLine(secretContent);
         }
