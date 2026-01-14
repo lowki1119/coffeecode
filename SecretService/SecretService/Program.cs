@@ -22,6 +22,8 @@ StringContent content = new StringContent(jsonPayload, Encoding.UTF8, "applicati
 
 while (true)
 {
+    Console.WriteLine("Starting Loop...");
+
     if (secret_id != null)
     {
         Console.WriteLine($" The secret id is {secret_id}");
@@ -31,22 +33,13 @@ while (true)
         Console.WriteLine(" The secret id is not set");
     }
 
-    if (role_id != null)
-    {
-        Console.WriteLine($" The role id is {role_id}");
-    }
-    else
-    {
-        Console.WriteLine(" The role id is not set");
-    }
-
     try
     {
         HttpResponseMessage response = await client.PostAsync(url, content);
         response.EnsureSuccessStatusCode();
 
         string responseBody = await response.Content.ReadAsStringAsync();
-        Console.WriteLine("Response:");
+        Console.WriteLine("Get Response:");
         Console.WriteLine(responseBody);
 
         VaultResponse? vaultResponse = JsonSerializer.Deserialize<VaultResponse>(responseBody, new JsonSerializerOptions
@@ -66,6 +59,7 @@ while (true)
         if (secretResponse.IsSuccessStatusCode)
         {
             string secretContent = await response.Content.ReadAsStringAsync();
+            Console.WriteLine("Secret Response:");
             Console.WriteLine(content);
         }
     }
